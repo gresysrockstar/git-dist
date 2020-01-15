@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="p2">
+        <page size="A4">
+        <div style="margin:0 auto;  background-color: #f9f9f9; ">
+            <table style="width:95%; margin:0 auto; margin-top:20px;">
+                <tbody>
+                    <tr>
+                        <td>
+                            <!-- Paitents table start -->
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="3" style="color: #17ada4;
+                                        font-size: 32px;
+                                        font-weight: bolder;
+                                        letter-spacing: -0.01vw;
+                                        height: 80px;
+                                        border-bottom: 0.1px solid #dedede;">
+                                            APPOINTMENT REPORT
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="  height: 100px;">
+                                            <button style="background-color: #17ada4 !important;
+                                        color: #fff !important;
+                                        border: none !important;
+                                        font-size: 20px !important;
+                                padding: 8px 18px!important;
+                                        border-radius: 6px;
+                                    ">PAITENT'S DETAILS
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td width="20%">
+                                           <span style=" box-sizing: border-box;
+                                             border-radius: 50%;">
+                                               <img src="img/profile.png" />
+                                        </td>
+                                        <td width="80%">
+                                            <!--  -->
+                                            <table style="table-layout: fixed;
+width: 100%;
+
+">
+                                        <thead>
+                                            <tr style=" vertical-align: baseline;">
+                                                <th style="text-align:left;     color: #969696;
+                                                font-weight: 500;">Paitent Name
+                                                </th>
+                                                <th style="text-align:left;      color: #969696;
+                                                 font-weight: 500;">Paitent ID
+                                                </th>
+                                                <th style="text-align:left;     color: #969696;
+                                                font-weight: 500;">Age
+                                                </th>
+                                                <th style="text-align:left;      color: #969696;
+                                                   font-weight: 500;">Gender
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                                <tbody>
+                                                    <tr style="height: 73px; vertical-align: baseline;">
+                                                        <td t-esc="doc.patient_id.name" style="color: #17ada4;
+                                                font-family: avenir;
+                                                font-size: 26px;
+                                                font-weight: bolder; text-align: left;">
+                                                </td>
+                                                <td t-esc="doc.patient_id.id" style="color: #17ada4;
+                                                font-family: avenir;
+                                                font-size: 26px;
+                                                font-weight: bolder;     text-align: left;">
+                                                </td>
+                                                <td t-esc="doc.patient_id.calculate_age(doc.patient_id.birthday)" style="color: #17ada4;
+                                                font-family: avenir;
+                                                font-size: 26px;
+                                                font-weight: bolder;     text-align: left;">
+                                                        </td>
+                                                        <td t-esc="doc.patient_id.gender" style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;     text-align: left;">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--  -->
+                                            <!--  -->
+                                            <table style="table-layout: fixed;
+width: 100%;
+
+
+">
+                                                <thead>
+                                                    <tr style=" vertical-align: baseline;">
+                                                        <th style="text-align:left; color: #969696;
+        font-weight: 500; ">Appointment Date
+                                                        </th>
+                                                        <th style="text-align:left;      color: #969696;
+        font-weight: 500;">Expiration Date
+                                                        </th>
+                                                        <th colspan="2" style="text-align:left;      color: #969696;
+        font-weight: 500;">PaymentTermss
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr style="height:63px; vertical-align: baseline;">
+                                                        <td t-esc="doc.time_calendar" style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;     text-align: left;">
+                                                        </td>
+                                                        <td style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;     text-align: left;">13-Dec-2019
+                                                        </td>
+                                                        <td colspan="2" style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;;     text-align: left;">Cash
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--  -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--Paitents table end -->
+                            <!-- Vitals table start -->
+                            <table style="border-bottom: 2px solid #6c6c6c;">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" style="  height: 100px;">
+                                            <button style="background-color: #17ada4 !important;
+
+        color: #fff !important;
+        border: none !important;
+        font-size: 20px !important;
+    padding: 8px 18px!important;
+        border-radius: 6px;
+        ">VITAL'S DETAILS</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!--  -->
+                                            <table cellpadding="0" cellspacing="0" style="table-layout: fixed;
+width: 100%;
+
+">
+                                                <tbody>
+                                                    <tr style="height:20px; vertical-align: baseline;">
+                                                        <th style="color: #6c6c6c;
+        font-family: avenir;
+        font-size: 18px;
+        font-weight: bolder;      padding-left: 30px;   text-align: left;">SYMTOMS
+                                                        </th>
+                                                        <th style="color: #6c6c6c;
+        font-family: avenir;
+        font-size: 18px;
+        font-weight: bolder;   padding-left: 30px;  text-align: left;    border-left: 2px solid #6c6c6c;
+border-right: 2px solid #6c6c6c">TEMPERATURE
+                                                        </th>
+                                                        <th style="color: #6c6c6c;
+        font-family: avenir;
+        font-size: 18px;
+        font-weight: bolder;  padding-left: 30px;   text-align: left;">HEART RATE
+                                                        </th>
+                                                    </tr>
+                                                    <tr style="height: 73px; vertical-align: baseline;">
+                                                        <td style="text-align:left;        padding: 30px; color: #969696;
+        font-weight: 500;">
+                                                            <!--  -->
+                                                            <table style="table-layout: fixed; width: 100%;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <img src="/ci3_appointment_report/static/src/img/file_icon.svg"/>
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                            <!--  -->
+                                                                            <table cellpadding="3" cellspacing="5">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td style="background-color: #ef3c3d;
+border-radius: 7px;
+color: #fff;">Temperature
+                                                                                        </td>
+                                                                                        <td style="background-color: #ef3c3d;
+border-radius: 7px;
+color: #fff;">Temperature
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="background-color: #ef3c3d;
+border-radius: 7px;
+color: #fff;">Temperature
+                                                                                        </td>
+                                                                                        <td style="background-color: #ef3c3d;
+border-radius: 7px;
+color: #fff;">Temperature
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="background-color: #ef3c3d;
+border-radius: 7px;
+color: #fff;">Temperature
+                                                                                        </td>
+                                                                                        <td style="background-color: #ef3c3d;
+border-radius: 7px;
+color: #fff;">Temperature
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td style="background-color: #ef3c3d;
+border-radius: 7px;
+color: #fff;">Temperature
+                                                                                        </td>
+                                                                                        <td style="background-color: #ef3c3d;
+border-radius: 7px;
+color: #fff;">Temperature
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <!--  -->
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--  -->
+                                                        </td>
+                                                        <td style="text-align:left;       padding: 30px;  color: #969696;
+        font-weight: 500;     border-left: 2px solid #6c6c6c;
+border-right: 2px solid #6c6c6c">
+                                                            <!--  -->
+                                                            <table style="table-layout: fixed; width: 100%;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <img src="/ci3_appointment_report/static/src/img/temperature.svg"/>
+                                                                        </td>
+                                                                        <td colspan="3" style="color: #6c6c6c;">
+                                                                            <span t-esc="doc.temperature" style="font-size: 100px;">
+                                                                              100
+                                                                            </span>
+                                                                            <span style="font-size: 60px;">&#8451;
+                                                                            </span>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--  -->
+                                                        </td>
+                                                        <td style="text-align:left;      padding: 30px;   color: #969696;
+        font-weight: 500;">
+                                                            <!--  -->
+                                                            <table style="table-layout: fixed; width: 100%;">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td colspan="2">
+                                                                            <img src="/ci3_appointment_report/static/src/img/heart_icon.svg"/>
+                                                                        </td>
+                                                                        <td colspan="3">
+                                                                            <!--  -->
+                                                                            <table style="text-align: center;">
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <span style="font-size: 60px; color: #6c6c6c;">
+                                                                                                80
+                                                                                            </span>
+                                                                                            <span style="font-size: 40px; color: #6c6c6c;">
+                                                                                                to
+                                                                                            </span>
+                                                                                            <span style="font-size: 60px; color: #6c6c6c;">
+                                                                                                126
+                                                                                            </span>
+                                                                                            <span style="font-size: 14px; color: #17ada4; font-weight: bold; ">
+                                                                                                mmhg
+                                                                                            </span>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            <span t-esc="doc.heart_rate" style="font-size: 60px; color: #6c6c6c;">
+
+                                                                                            </span>
+                                                                                            <span style="font-size: 14px; color: #17ada4; font-weight: bold;">
+                                                                                                BPM
+                                                                                            </span>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <!--  -->
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <!--  -->
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--  -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Vitals table end -->
+                            <!-- Appointment table start -->
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="2" style="  height: 100px;">
+                                            <button style="background-color: #17ada4 !important;
+        color: #fff !important;
+        border: none !important;
+        font-size: 20px !important;
+    padding: 8px 18px!important;
+        border-radius: 6px;
+        ">APPOINTMENT DETAILS
+                                    </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <!--  -->
+                                            <table style="table-layout: fixed;
+width: 100%;
+
+">
+                                                <thead>
+                                                    <tr style=" vertical-align: baseline;">
+                                                        <th style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;     text-align: left;">Branch
+                                                        </th>
+                                                        <th style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;     text-align: left;">Department
+                                                        </th>
+                                                        <th style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;     text-align: left;">Physician
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr style="height:63px; vertical-align: baseline;">
+                                                        <td t-esc="doc.branch_id.name" style="text-align:left;     color: #000;
+        font-weight: 500;">
+                                                        </td>
+                                                        <td t-esc="doc.department_id.name" style="text-align:left;     color: #000;
+        font-weight: 500;">
+                                                        </td>
+                                                        <td t-esc="doc.doctor_id.name" style="text-align:left;     color: #000;
+        font-weight: 500;">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--  -->
+                                            <!--  -->
+                                            <table style="table-layout: fixed;
+                                               width: 100%;">
+                                                <thead>
+                                                    <tr style=" vertical-align: baseline;">
+                                                        <th style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;     text-align: left;">Service
+                                                        </th>
+                                                        <th style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;     text-align: left;">Fee
+                                                        </th>
+                                                        <th style="color: #17ada4;
+        font-family: avenir;
+        font-size: 26px;
+        font-weight: bolder;     text-align: left;">Taxes
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr style="height: 73px; vertical-align: baseline;">
+                                                        <td style="text-align:left;     color: #000;
+        font-weight: 500;">Routine Checkup
+                                                        </td>
+                                                        <td t-esc="doc.slots_id.fee" style="text-align:left;     color: #000;
+        font-weight: 500;">
+                                                        </td>
+                                                        <td style="text-align:left;     color: #000;
+        font-weight: 500;">14.20
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <!--  -->
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--Appointment table end -->
+                            <!-- Totle table -->
+                            <table style="table-layout: fixed; width: 100%;" cellpadding="0" cellspacing="0">
+                                <tbody>
+                                    <tr>
+                                        <td colspan="4"></td>
+                                        <td>
+                                            <table cellspacing="15" style="    float: right;
+">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>UnTaxed Amount:</td>
+                                                        <td>12:00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Taxes:</td>
+                                                        <td>14:20</td>
+                                                    </tr>
+                                                    <tr style="color:#17ada4;">
+                                                        <td>TOTAL</td>
+                                                        <td>26:20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Commissions:</td>
+                                                        <td>04:00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- Totle table -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        </page>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jqurey.js"></script>
+  </body>
+</html>
